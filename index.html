@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Title -->
+    <title>Eterniventures</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/venobox.min.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Rubik:wght@300&display=swap");
+
+
+        h1 {
+            font-family: "Playfair Display", serif;
+            font-weight: 400;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .window {
+            width: auto;
+            margin: auto;
+            border: 0px solid #1d505d;
+            border-radius: 5px;
+            box-shadow: 0px 20px 46px 2px #bcc6ff;
+            cursor: n-resize;
+
+            .windowImg {
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+                height: 270px;
+                transition: 8s all ease;
+
+                &:hover {
+                    object-position: bottom;
+                }
+            }
+        }
+
+        .credit {
+            font-weight: 300;
+            text-align: center;
+            margin-top: 6rem;
+            color: #b6bee8;
+            font-size: 14px;
+
+            &:hover {
+                span {
+                    color: #e91e63;
+                }
+
+                a {
+                    color: #e91e63;
+                    border-color: #e91e63;
+                }
+            }
+
+            span {
+                color: #b6bee8;
+                transition: ease all 200ms;
+            }
+
+            a {
+                color: #b6bee8;
+                transition: ease-in all 700ms;
+                -webkit-text-decoration: none;
+                text-decoration: none;
+                border-bottom: 2px solid #b6bee8;
+
+                &:hover {
+                    color: #fff;
+                    box-shadow: inset 0 -5.5rem 0 #e91e63;
+                    border-bottom: 2px solid #e91e63;
+                }
+            }
+        }
+    </style>
+
+</head>
+
+
+<body class="relative h-screen overflow-y-auto overflow-x-hidden bg-light text-dark dark:bg-dark-2 dark:text-light">
+    <div class="mx-auto flex max-w-screen-2xl flex-col justify-between gap-4 p-4 lg:gap-6 lg:p-6">
+        <!-- Header -->
+        <header class="sticky top-0 z-50">
+            <div class="">
+                <div
+                    class="flex items-center justify-between rounded-2xl bg-white p-3 shadow dark:bg-black dark:shadow-dark">
+                    <!-- Logo -->
+                    <a href="index.html"
+                        class="inline-flex items-center gap-3 px-3 text-2xl font-semibold text-dark dark:text-white">
+                        <img src="./assets/img/eterniventures.png" style="width: auto; height: 70px;" alt="">
+
+                        <span> Eterni<span class="text-primary">ventures</span> </span>
+                    </a>
+
+                    <!-- Navigation menu -->
+                    <ul class="hidden flex-1 flex-wrap items-center justify-center lg:flex">
+                        <li class="group/menu-item active">
+                            <a href="index.html"
+                                class="group inline-flex items-center gap-2 rounded-lg px-3 py-2 text-center text-base font-medium text-muted transition hover:bg-light hover:text-dark group-[.active]/menu-item:bg-light group-[.active]/menu-item:text-dark dark:hover:bg-dark-2 dark:hover:text-white dark:group-[.active]/menu-item:bg-dark-2 dark:group-[.active]/menu-item:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.2"
+                                    class="h-6 w-6 text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
+                                    <path
+                                        d="M15.833 7.258 11.39 3.802a2.222 2.222 0 0 0-2.728 0L4.216 7.258a2.22 2.22 0 0 0-.858 1.754v6a1.667 1.667 0 0 0 1.667 1.667h10a1.667 1.667 0 0 0 1.667-1.666v-6c0-.686-.317-1.334-.859-1.755Z" />
+                                    <path d="M13.333 12.5c-1.841 1.11-4.826 1.11-6.667 0" />
+                                </svg>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="group/menu-item ">
+                            <a href="about.html"
+                                class="group inline-flex items-center gap-2 rounded-lg px-3 py-2 text-center text-base font-medium text-muted transition hover:bg-light hover:text-dark group-[.active]/menu-item:bg-light group-[.active]/menu-item:text-dark dark:hover:bg-dark-2 dark:hover:text-white dark:group-[.active]/menu-item:bg-dark-2 dark:group-[.active]/menu-item:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.2"
+                                    class="h-6 w-6 text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
+                                    <path d="M10.5 10.833a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                                    <path
+                                        d="M10.5 2.5c6 0 7.5 1.5 7.5 7.5s-1.5 7.5-7.5 7.5S3 16 3 10s1.5-7.5 7.5-7.5Z" />
+                                    <path
+                                        d="M5.5 16.708v-.041a3.333 3.333 0 0 1 3.333-3.334h3.334a3.333 3.333 0 0 1 3.333 3.334v.041" />
+                                </svg>
+                                <span>About</span>
+                            </a>
+                        </li>
+
+                        <li class="group/menu-item ">
+                            <a href="portfolio.html"
+                                class="group inline-flex items-center gap-2 rounded-lg px-3 py-2 text-center text-base font-medium text-muted transition hover:bg-light hover:text-dark group-[.active]/menu-item:bg-light group-[.active]/menu-item:text-dark dark:hover:bg-dark-2 dark:hover:text-white dark:group-[.active]/menu-item:bg-dark-2 dark:group-[.active]/menu-item:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.2"
+                                    class="h-6 w-6 text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
+                                    <path
+                                        d="m3.503 5.998 5.949-2.591a.8.8 0 0 1 1.058.439l4.103 9.918a.834.834 0 0 1-.428 1.087l-5.948 2.59a.8.8 0 0 1-1.059-.438l-4.103-9.92a.833.833 0 0 1 .428-1.085ZM13 3.333h.833a.833.833 0 0 1 .834.834v2.916M17.167 5c.22.093.433.18.64.263a.833.833 0 0 1 .442 1.092l-1.915 4.478" />
+                                </svg>
+                                <span>Works</span>
+                            </a>
+                        </li>
+                        <li class="group/menu-item ">
+                            <a href="blog.html"
+                                class="group inline-flex items-center gap-2 rounded-lg px-3 py-2 text-center text-base font-medium text-muted transition hover:bg-light hover:text-dark group-[.active]/menu-item:bg-light group-[.active]/menu-item:text-dark dark:hover:bg-dark-2 dark:hover:text-white dark:group-[.active]/menu-item:bg-dark-2 dark:group-[.active]/menu-item:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.2"
+                                    class="h-6 w-6 text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
+                                    <path
+                                        d="m14.667 9.167 1.25-1.25a2.357 2.357 0 1 0-3.333-3.334l-8.75 8.75v3.334h3.333L8.834 15m2.916-9.583 3.333 3.333m.417 9.583 2.792-2.736a1.785 1.785 0 0 0 .004-2.56 1.87 1.87 0 0 0-2.608-.005l-.186.184-.186-.184a1.869 1.869 0 0 0-2.607-.005 1.787 1.787 0 0 0-.005 2.56l2.796 2.746Z" />
+                                </svg>
+                                <span>Designs</span>
+                            </a>
+                        </li>
+                        <li class="group/menu-item ">
+                            <a href="contact.html"
+                                class="group inline-flex items-center gap-2 rounded-lg px-3 py-2 text-center text-base font-medium text-muted transition hover:bg-light hover:text-dark group-[.active]/menu-item:bg-light group-[.active]/menu-item:text-dark dark:hover:bg-dark-2 dark:hover:text-white dark:group-[.active]/menu-item:bg-dark-2 dark:group-[.active]/menu-item:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.2"
+                                    class="h-6 w-6 text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
+                                    <path
+                                        d="M6.667 7.5h6.666m-6.666 3.333h5M15 3.333a2.5 2.5 0 0 1 2.5 2.5V12.5A2.5 2.5 0 0 1 15 15h-4.167l-4.166 2.5V15H5a2.5 2.5 0 0 1-2.5-2.5V5.833a2.5 2.5 0 0 1 2.5-2.5h10Z" />
+                                </svg>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Header buttons -->
+                    <div class="hidden items-center gap-4 lg:flex">
+                        <!-- Theme appearance toggler -->
+                        <div class="">
+                            <button type="button"
+                                class="hs-dark-mode group flex h-10 w-10 items-center justify-center rounded-lg text-center font-medium text-dark transition hover:bg-light hs-dark-mode-active:hidden dark:text-gray-400 dark:hover:text-gray-500"
+                                data-hs-theme-click-value="dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                    class="h-6 w-6">
+                                    <path
+                                        d="M11.8 3a8.656 8.656 0 0 0-4.523 1.28A8.918 8.918 0 0 0 4.04 7.756a9.167 9.167 0 0 0 .44 9.24 8.863 8.863 0 0 0 3.553 3.137 8.633 8.633 0 0 0 4.624.824 8.69 8.69 0 0 0 4.381-1.723 8.973 8.973 0 0 0 2.892-3.78c.3-.738-.419-1.48-1.142-1.179a5.604 5.604 0 0 1-3.892.15 5.74 5.74 0 0 1-3.083-2.431 5.956 5.956 0 0 1-.848-3.886c.17-1.357.8-2.61 1.78-3.541l.069-.072c.485-.567.099-1.488-.668-1.488h-.234l-.06-.005L11.8 3Z" />
+                                </svg>
+                            </button>
+                            <button type="button"
+                                class="hs-dark-mode group hidden h-10 w-10 items-center justify-center rounded-lg text-center font-medium text-dark transition hover:bg-light hs-dark-mode-active:flex dark:text-[#FD7E41] dark:hover:bg-dark dark:hover:text-[#FD7E41]"
+                                data-hs-theme-click-value="light">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20"
+                                    class="h-6 w-6">
+                                    <path
+                                        d="M10 15.833a.833.833 0 0 1 .828.736l.005.098v.833a.833.833 0 0 1-1.66.097l-.006-.097v-.833a.833.833 0 0 1 .833-.834Zm5.26-1.741.08.069.582.583a.833.833 0 0 1-1.1 1.248l-.078-.07-.583-.583a.833.833 0 0 1 1.015-1.306l.085.059Zm-9.42.068a.833.833 0 0 1 .068 1.1l-.069.08-.583.582a.833.833 0 0 1-1.248-1.1l.07-.078.583-.583a.833.833 0 0 1 1.178 0ZM3.333 9.167a.833.833 0 0 1 .098 1.66l-.098.006H2.5a.833.833 0 0 1-.098-1.66l.098-.006h.833Zm14.167 0a.833.833 0 0 1 .098 1.66l-.098.006h-.833a.833.833 0 0 1-.098-1.66l.098-.006h.833ZM5.178 4.008l.078.07.583.583a.833.833 0 0 1-1.1 1.247l-.078-.069-.583-.583A.833.833 0 0 1 5.092 3.95l.086.058Zm10.744.069a.833.833 0 0 1 .07 1.1l-.07.079-.583.583a.833.833 0 0 1-1.247-1.1l.069-.078.583-.584a.833.833 0 0 1 1.178 0ZM10 1.667a.833.833 0 0 1 .828.736l.005.097v.833a.833.833 0 0 1-1.66.098l-.006-.098V2.5A.833.833 0 0 1 10 1.667Zm0 4.166a4.167 4.167 0 1 1-4.163 4.348L5.833 10l.004-.18A4.167 4.167 0 0 1 10 5.832Z" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <a href="contact.html"
+                            class="inline-flex items-center gap-2 rounded-lg bg-dark px-6 py-4 text-center text-base font-semibold leading-tight text-white transition hover:bg-primary dark:bg-dark-2 dark:text-white dark:hover:bg-primary dark:hover:text-white">
+                            <span>Let's Talk</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                class="h-5 w-5">
+                                <path d="M17.5 11.667v-5h-5" />
+                                <path d="m17.5 6.667-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Navigation toggler -->
+                    <button type="button" class="text-dark transition dark:text-white/70 lg:hidden"
+                        data-hs-overlay="#mobile-menu" aria-controls="mobile-menu" aria-label="Toggle navigation">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <svg class="h-9 w-9 flex-shrink-0" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- Header end -->
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu"
+            class="hs-overlay fixed bottom-0 start-0 top-0 z-[60] hidden h-full w-64 -translate-x-full transform overflow-y-auto bg-white transition-all duration-300 hs-overlay-open:translate-x-0 dark:bg-black [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar]:w-2">
+            <div class="flex h-full flex-col justify-between gap-5 p-5">
+                <div class="">
+                    <!-- Logo -->
+                    <a href="index.html"
+                        class="inline-flex items-center gap-3 text-2xl font-semibold text-dark dark:text-white">
+                        <img src="./assets/img/eterniventures.png" style="width: auto; height: 40px;" alt="">
+
+                        <span> Eterni<span class="text-primary">ventures</span> </span>
+                    </a>
+                </div>
+
+                <ul class="mt-4 flex flex-1 flex-col gap-2">
+                    <li class="group/menu-item active">
+                        <a href="index.html"
+                            class="group inline-flex w-full items-center gap-2 rounded-lg px-3 py-2 text-center text-base font-medium text-muted transition hover:bg-light hover:text-dark group-[.active]/menu-item:bg-light group-[.active]/menu-item:text-dark dark:hover:bg-dark-2 dark:hover:text-white dark:group-[.active]/menu-item:bg-dark-2 dark:group-[.active]/menu-item:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
+                                class="h-6 w-6 text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
+                                <path
+                                    d="M15.833 7.258 11.39 3.802a2.222 2.222 0 0 0-2.728 0L4.216 7.258a2.22 2.22 0 0 0-.858 1.754v6a1.667 1.667 0 0 0 1.667 1.667h10a1.667 1.667 0 0 0 1.667-1.666v-6c0-.686-.317-1.334-.859-1.755Z" />
+                                <path d="M13.333 12.5c-1.841 1.11-4.826 1.11-6.667 0" />
+                            </svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="group/menu-item ">
+                        <a href="about.html"
+                            class="group inline-flex w-full items-center gap-2 rounded-lg px-3 py-2 text-center text-base font-medium text-muted transition hover:bg-light hover:text-dark group-[.active]/menu-item:bg-light group-[.active]/menu-item:text-dark dark:hover:bg-dark-2 dark:hover:text-white dark:group-[.active]/menu-item:bg-dark-2 dark:group-[.active]/menu-item:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
+                                class="h-6 w-6 text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
+                                <path d="M10.5 10.833a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                                <path d="M10.5 2.5c6 0 7.5 1.5 7.5 7.5s-1.5 7.5-7.5 7.5S3 16 3 10s1.5-7.5 7.5-7.5Z" />
+                                <path
+                                    d="M5.5 16.708v-.041a3.333 3.333 0 0 1 3.333-3.334h3.334a3.333 3.333 0 0 1 3.333 3.334v.041" />
+                            </svg>
+                            <span>About</span>
+                        </a>
+                    </li>
+
+                    <li class="group/menu-item ">
+                        <a href="portfolio.html"
+                            class="group inline-flex w-full items-center gap-2 rounded-lg px-3 py-2 text-center text-base font-medium text-muted transition hover:bg-light hover:text-dark group-[.active]/menu-item:bg-light group-[.active]/menu-item:text-dark dark:hover:bg-dark-2 dark:hover:text-white dark:group-[.active]/menu-item:bg-dark-2 dark:group-[.active]/menu-item:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
+                                class="h-6 w-6 text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
+                                <path
+                                    d="m3.503 5.998 5.949-2.591a.8.8 0 0 1 1.058.439l4.103 9.918a.834.834 0 0 1-.428 1.087l-5.948 2.59a.8.8 0 0 1-1.059-.438l-4.103-9.92a.833.833 0 0 1 .428-1.085ZM13 3.333h.833a.833.833 0 0 1 .834.834v2.916M17.167 5c.22.093.433.18.64.263a.833.833 0 0 1 .442 1.092l-1.915 4.478" />
+                            </svg>
+                            <span>Works</span>
+                        </a>
+                    </li>
+                    <li class="group/menu-item ">
+                        <a href="blog.html"
+                            class="group inline-flex w-full items-center gap-2 rounded-lg px-3 py-2 text-center text-base font-medium text-muted transition hover:bg-light hover:text-dark group-[.active]/menu-item:bg-light group-[.active]/menu-item:text-dark dark:hover:bg-dark-2 dark:hover:text-white dark:group-[.active]/menu-item:bg-dark-2 dark:group-[.active]/menu-item:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
+                                class="h-6 w-6 text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
+                                <path
+                                    d="m14.667 9.167 1.25-1.25a2.357 2.357 0 1 0-3.333-3.334l-8.75 8.75v3.334h3.333L8.834 15m2.916-9.583 3.333 3.333m.417 9.583 2.792-2.736a1.785 1.785 0 0 0 .004-2.56 1.87 1.87 0 0 0-2.608-.005l-.186.184-.186-.184a1.869 1.869 0 0 0-2.607-.005 1.787 1.787 0 0 0-.005 2.56l2.796 2.746Z" />
+                            </svg>
+                            <span>Designs</span>
+                        </a>
+                    </li>
+                    <li class="group/menu-item ">
+                        <a href="contact.html"
+                            class="group inline-flex w-full items-center gap-2 rounded-lg px-3 py-2 text-center text-base font-medium text-muted transition hover:bg-light hover:text-dark group-[.active]/menu-item:bg-light group-[.active]/menu-item:text-dark dark:hover:bg-dark-2 dark:hover:text-white dark:group-[.active]/menu-item:bg-dark-2 dark:group-[.active]/menu-item:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
+                                class="h-6 w-6 text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
+                                <path
+                                    d="M6.667 7.5h6.666m-6.666 3.333h5M15 3.333a2.5 2.5 0 0 1 2.5 2.5V12.5A2.5 2.5 0 0 1 15 15h-4.167l-4.166 2.5V15H5a2.5 2.5 0 0 1-2.5-2.5V5.833a2.5 2.5 0 0 1 2.5-2.5h10Z" />
+                            </svg>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="flex flex-col gap-3">
+                    <button data-hs-theme-click-value="dark"
+                        class="hs-dark-mode flex w-full items-center justify-start gap-2 rounded-lg px-4 py-2 text-center text-sm text-muted transition hover:bg-light hs-dark-mode-active:hidden dark:hover:bg-dark dark:hover:text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6">
+                            <path
+                                d="M11.8 3a8.656 8.656 0 0 0-4.523 1.28A8.918 8.918 0 0 0 4.04 7.756a9.167 9.167 0 0 0 .44 9.24 8.863 8.863 0 0 0 3.553 3.137 8.633 8.633 0 0 0 4.624.824 8.69 8.69 0 0 0 4.381-1.723 8.973 8.973 0 0 0 2.892-3.78c.3-.738-.419-1.48-1.142-1.179a5.604 5.604 0 0 1-3.892.15 5.74 5.74 0 0 1-3.083-2.431 5.956 5.956 0 0 1-.848-3.886c.17-1.357.8-2.61 1.78-3.541l.069-.072c.485-.567.099-1.488-.668-1.488h-.234l-.06-.005L11.8 3Z" />
+                        </svg>
+
+                        <span>Change appearance</span>
+                    </button>
+
+                    <button data-hs-theme-click-value="light"
+                        class="hs-dark-mode hidden w-full items-center justify-start gap-2 rounded-lg px-4 py-2 text-center text-sm text-muted transition hover:bg-light hs-dark-mode-active:flex dark:hover:bg-dark dark:hover:text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6">
+                            <path
+                                d="M10 15.833a.833.833 0 0 1 .828.736l.005.098v.833a.833.833 0 0 1-1.66.097l-.006-.097v-.833a.833.833 0 0 1 .833-.834Zm5.26-1.741.08.069.582.583a.833.833 0 0 1-1.1 1.248l-.078-.07-.583-.583a.833.833 0 0 1 1.015-1.306l.085.059Zm-9.42.068a.833.833 0 0 1 .068 1.1l-.069.08-.583.582a.833.833 0 0 1-1.248-1.1l.07-.078.583-.583a.833.833 0 0 1 1.178 0ZM3.333 9.167a.833.833 0 0 1 .098 1.66l-.098.006H2.5a.833.833 0 0 1-.098-1.66l.098-.006h.833Zm14.167 0a.833.833 0 0 1 .098 1.66l-.098.006h-.833a.833.833 0 0 1-.098-1.66l.098-.006h.833ZM5.178 4.008l.078.07.583.583a.833.833 0 0 1-1.1 1.247l-.078-.069-.583-.583A.833.833 0 0 1 5.092 3.95l.086.058Zm10.744.069a.833.833 0 0 1 .07 1.1l-.07.079-.583.583a.833.833 0 0 1-1.247-1.1l.069-.078.583-.584a.833.833 0 0 1 1.178 0ZM10 1.667a.833.833 0 0 1 .828.736l.005.097v.833a.833.833 0 0 1-1.66.098l-.006-.098V2.5A.833.833 0 0 1 10 1.667Zm0 4.166a4.167 4.167 0 1 1-4.163 4.348L5.833 10l.004-.18A4.167 4.167 0 0 1 10 5.832Z" />
+                        </svg>
+
+                        <span>Change appearance</span>
+                    </button>
+
+                    <a href="contact.html"
+                        class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-dark px-6 py-4 text-center text-base font-semibold leading-tight text-white transition hover:bg-primary dark:bg-dark-2 dark:text-white dark:hover:bg-primary dark:hover:text-white">
+                        <span>Let's Talk</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="h-5 w-5">
+                            <path d="M17.5 11.667v-5h-5" />
+                            <path d="m17.5 6.667-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <main class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-6">
+            <!-- Intro -->
+            <div class="rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark">
+                <div class="aspect-6/4 overflow-hidden rounded-lg bg-light pt-4 text-center dark:bg-dark-2">
+                    <img src="assets/img/pikaso_edit.png" alt=""
+                        class="inline-block h-full w-full scale-110 object-contain object-bottom" />
+                </div>
+
+                <div class="mt-6">
+                    <h3 class="text-2xl font-semibold dark:text-light">Silila Wijesinghe 👋</h3>
+                    <p class="mt-2 text-muted dark:text-light/70">
+                        A Passionate
+                        <span class="font-semibold text-dark dark:text-white">
+                            Full Stack Developer
+                        </span>
+                        🖥️ &
+                        <span class="font-semibold text-dark dark:text-white">
+                            Graphic Designer
+                        </span>
+                        having
+                        <span class="font-semibold text-dark dark:text-white"> 4 years </span>
+                        of Experiences.
+                    </p>
+
+                    <!-- CTA buttons -->
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <a href="tel:+94759804167"
+                            class="inline-flex items-center gap-x-2 rounded-lg border border-transparent bg-primary px-6 py-4 font-medium text-white transition hover:bg-blue-600 focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                class="h-6 w-6">
+                                <path
+                                    d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Zm10 3a2 2 0 0 1 2 2m-2-6a6 6 0 0 1 6 6" />
+                            </svg>
+                            <span>Book A Call</span>
+                        </a>
+                        <button type="button" data-clipboard-text="sililawijesinghe@gmail.com"
+                            data-clipboard-action="copy" data-clipboard-success-text="Copied to clipboard"
+                            class="js-clipboard hs-tooltip inline-flex items-center gap-x-2 rounded-lg border border-light bg-transparent px-6 py-4 font-medium text-dark transition [--trigger:focus] hover:bg-light focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-dark dark:text-light/70 dark:hover:bg-dark dark:hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                class="h-6 w-6">
+                                <path d="M8 10a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2v-8Z" />
+                                <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" />
+                            </svg>
+                            <span>Copy Email</span>
+
+                            <span
+                                class="hs-tooltip-content invisible z-10 hidden rounded-lg bg-gray-900 px-2 py-1 text-xs font-medium text-white opacity-0 shadow-sm transition-opacity hs-tooltip-shown:visible hs-tooltip-shown:opacity-100 dark:bg-slate-700"
+                                role="tooltip">
+                                Copied to clipboard
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="group rounded-2xl bg-white px-6 pt-0 shadow dark:bg-black dark:shadow-dark">
+                        <h3
+                            class="relative z-10 bg-white pb-2 pt-6 text-2xl font-semibold dark:bg-black dark:text-light">
+                            Work Experience
+                        </h3>
+
+                        <div
+                            class="max-h-[200px] space-y-5 overflow-hidden pb-6 pt-5 [&::-webkit-scrollbar-thumb]:bg-gray-400 dark:[&::-webkit-scrollbar-thumb]:bg-slate-500 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar]:w-0">
+                            <div class="space-y-4 group-hover:[animation-play-state:paused]">
+                                <div class="flex flex-col gap-1 md:flex-row md:gap-10">
+                                    <p class="mt-3 text-xs font-medium text-muted dark:text-light/70">
+                                        2019 - 2024
+                                    </p>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="grid h-8 w-8 shrink-0 place-content-center rounded-lg bg-light dark:bg-dark-2">
+                                            <img src="assets/img/favicon.png" alt="" class="h-5 w-6" />
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-base font-semibold text-dark dark:text-light/70">
+                                                Eterniventures
+                                            </h6>
+                                            <p class="text-xs text-muted">
+                                                Freelance Graphic Designer
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-1 md:flex-row md:gap-10">
+                                    <p class="mt-3 text-xs font-medium text-muted dark:text-light/70">
+                                        Present
+                                    </p>
+                                    <div class="flex items-center gap-3" style="padding-left: 27px;">
+                                        <div
+                                            class="grid h-8 w-11 shrink-0 place-content-center rounded-lg bg-light dark:bg-dark-2">
+                                            <img src="assets/img/vampior.png" alt="" class="h-5 w-5" />
+                                        </div>
+                                        <div class="px-2">
+                                            <h6 class="text-base font-semibold text-dark dark:text-light/70">
+                                                Vampior Designs
+                                            </h6>
+                                            <p class="text-xs text-muted">
+                                                Fullstack Web Designer
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4 lg:gap-6">
+                <!-- Work Experience -->
+
+                <!-- Expertise -->
+                <div class="rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark">
+                    <h3 class="text-2xl font-semibold dark:text-light">My Tools</h3>
+
+                    <div class="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3">
+                        <div class="text-center">
+                            <div class="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
+                                <img src="https://img.icons8.com/color/48/html-5--v1.png" alt="" class="h-8 w-8" />
+                            </div>
+                            <p class="mt-1 text-base font-medium text-dark dark:text-light/70">
+                                HTML
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
+                                <img src="https://img.icons8.com/color/48/css3.png" alt="" class="h-8 w-8" />
+                            </div>
+                            <p class="mt-1 text-base font-medium text-dark dark:text-light/70">
+                                CSS
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
+                                <img src="https://img.icons8.com/fluency/48/javascript.png" alt="" class="h-8 w-8" />
+                            </div>
+                            <p class="mt-1 text-base font-medium text-dark dark:text-light/70">
+                                Javascript
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
+                                <img src="https://img.icons8.com/fluency/48/laravel.png" alt="" class="h-8 w-8" />
+                            </div>
+                            <p class="mt-1 text-base font-medium text-dark dark:text-light/70">
+                                Laravel
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
+                                <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-codeigniter-is-an-open-source-software-rapid-development-web-framework-logo-color-tal-revivo.png"
+                                    alt="" class="h-8 w-8" />
+                            </div>
+                            <p class="mt-1 text-base font-medium text-dark dark:text-light/70">
+                                Codeigniter
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
+                                <img src="https://img.icons8.com/3d-fluency/188/wordpress.png" alt="" class="h-8 w-8" />
+                            </div>
+                            <p class="mt-1 text-base font-medium text-dark dark:text-light/70">
+                                Wordpress
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
+                                <img src="assets/img/react.svg" alt="" class="h-8 w-8" />
+                            </div>
+                            <p class="mt-1 text-base font-medium text-dark dark:text-light/70">
+                                React
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
+                                <img src="https://img.icons8.com/?size=100&id=x7XMNGh2vdqA&format=png&color=000000"
+                                    alt="" class="h-8 w-8" />
+                            </div>
+                            <p class="mt-1 text-base font-medium text-dark dark:text-light/70">
+                                Tailwind CSS
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
+                                <img src="assets/img/framer.svg" alt="" class="h-8 w-8" />
+                            </div>
+                            <p class="mt-1 text-base font-medium text-dark dark:text-light/70">
+                                Framer
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
+                                <img src="https://img.icons8.com/?size=100&id=lTKW3iI3wIT0&format=png&color=000000"
+                                    alt="" class="h-8 w-8" />
+                            </div>
+                            <p class="mt-1 text-base font-medium text-dark dark:text-light/70">
+                                Java
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
+                                <img src="https://img.icons8.com/?size=100&id=13441&format=png&color=000000" alt=""
+                                    class="h-8 w-8" />
+                            </div>
+                            <p class="mt-1 text-base font-medium text-dark dark:text-light/70">
+                                Python
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
+                                <img src="https://img.icons8.com/?size=100&id=45490&format=png&color=000000" alt=""
+                                    class="h-8 w-8" />
+                            </div>
+                            <p class="mt-1 text-base font-medium text-dark dark:text-light/70">
+                                C#
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
+                                <img src="https://img.icons8.com/3d-fluency/94/adobe-photoshop.png" alt=""
+                                    class="h-8 w-8" />
+                            </div>
+                            <p class="mt-1 text-base font-medium text-dark dark:text-light/70">
+                                Ps
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
+                                <img src="https://img.icons8.com/3d-fluency/94/adobe-illustrator.png" alt=""
+                                    class="h-8 w-8" />
+                            </div>
+                            <p class="mt-1 text-base font-medium text-dark dark:text-light/70">
+                                Ai
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
+                                <img src="https://img.icons8.com/fluency/48/canva.png" alt="" class="h-8 w-8" />
+                            </div>
+                            <p class="mt-1 text-base font-medium text-dark dark:text-light/70">
+                                Canva
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
+                                <img src="https://img.icons8.com/fluency/48/mysql-logo.png" alt="" class="h-8 w-8" />
+                            </div>
+                            <p class="mt-1 text-base font-medium text-dark dark:text-light/70">
+                                MySQL
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
+                                <img src="https://img.icons8.com/color/48/firebase.png" alt="" class="h-8 w-8" />
+                            </div>
+                            <p class="mt-1 text-base font-medium text-dark dark:text-light/70">
+                                Firebase
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
+                                <img src="https://img.icons8.com/nolan/64/php--v2.png" alt="" class="h-8 w-8" />
+                            </div>
+                            <p class="mt-1 text-base font-medium text-dark dark:text-light/70">
+                                PHP
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div class="rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                    <h3 class="text-2xl font-semibold dark:text-light">Recent Projects</h3>
+                    <a href="portfolio.html"
+                        class="inline-flex items-center justify-center gap-2 border-b text-center text-base text-primary transition hover:border-b-primary dark:border-b-muted dark:hover:border-b-primary">
+                        <span>All Projects</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="h-5 w-5">
+                            <path d="M4.167 10h11.666m-4.999 5 5-5m-5-5 5 5" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="mt-6 space-y-6">
+                    <a href="https://ica.lk/" target="_blank">
+                        <div
+                            class="group relative overflow-hidden rounded-lg bg-light p-4 pb-0 dark:bg-dark-2 md:p-6 md:pb-0">
+                            <div class="relative aspect-6/4 overflow-hidden rounded-t-lg window">
+                                <a href="https://ica.lk/" target="_blank"><img src="assets/img/icaLK.png" alt=""
+                                        class="h-full w-full rounded-t-lg object-cover object-top transition windowImg" /></a>
+                            </div>
+
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex flex-wrap gap-2 bg-gradient-to-t from-black/20 p-4">
+                                <span class="rounded bg-white px-2 py-1 text-xs font-medium text-primary shadow">
+                                    ICA Campus
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <div
+                        class="group relative overflow-hidden rounded-lg bg-light p-4 pb-0 dark:bg-dark-2 md:p-6 md:pb-0">
+                        <div class="relative aspect-6/4 overflow-hidden rounded-t-lg window">
+                            <a href="https://ica.lk/" target="_blank"><img src="assets/img/thePink.png" alt=""
+                                    class="h-full w-full rounded-t-lg object-cover object-top transition windowImg" /></a>
+                        </div>
+
+                        <div
+                            class="absolute inset-x-0 bottom-0 flex flex-wrap gap-2 bg-gradient-to-t from-black/20 p-4">
+                            <span class="rounded bg-white px-2 py-1 text-xs font-medium text-primary shadow">
+                                The Pink
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div class="rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark lg:col-span-2">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                    <h3 class="text-2xl font-semibold dark:text-light">Services I Offered</h3>
+                    <a href="services.html"
+                        class="inline-flex items-center justify-center gap-2 border-b text-center text-base text-primary transition hover:border-b-primary dark:border-b-muted dark:hover:border-b-primary">
+                        <span>See All Services</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="h-5 w-5">
+                            <path d="M4.167 10h11.666m-4.999 5 5-5m-5-5 5 5" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="mt-6 grid grid-cols-2 gap-6 md:grid-cols-4">
+                    <div class="rounded-2xl bg-light p-2 text-center dark:bg-dark-2 md:p-4">
+                        <div class="grid place-content-center rounded-lg bg-white p-6 dark:bg-black">
+                            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                                type="module"></script>
+
+                            <dotlottie-player
+                                src="https://lottie.host/165d1be1-b1ee-4809-81f6-bab68f0eb2cc/SB5kJgf5K4.json"
+                                background="transparent" speed="1" style="width: 100px; height: auto;" loop
+                                autoplay></dotlottie-player>
+                        </div>
+                        <p class="mt-3 text-base font-medium text-dark dark:text-light/70">
+                            Web Design
+                        </p>
+                    </div>
+                    <div class="rounded-2xl bg-light p-2 text-center dark:bg-dark-2 md:p-4">
+                        <div class="grid place-content-center rounded-lg bg-white p-6 dark:bg-black">
+                            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                                type="module"></script>
+
+                            <dotlottie-player
+                                src="https://lottie.host/d0f5603e-72da-43d0-872f-43370355de33/Ynsb1TCdWX.json"
+                                background="transparent" speed="1" style="width: 150px; height: auto;" loop
+                                autoplay></dotlottie-player>
+                        </div>
+                        <p class="mt-3 text-base font-medium text-dark dark:text-light/70">
+                            Mobile App
+                        </p>
+                    </div>
+                    <div class="rounded-2xl bg-light p-2 text-center dark:bg-dark-2 md:p-4">
+                        <div class="grid place-content-center rounded-lg bg-white p-6 dark:bg-black">
+                            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                                type="module"></script>
+
+                            <dotlottie-player
+                                src="https://lottie.host/87814c3f-5494-4428-a9aa-c69b72403427/ovGNevir3H.json"
+                                background="transparent" speed="1" style="width: 100px; height: auto;" loop
+                                autoplay></dotlottie-player>
+                        </div>
+                        <p class="mt-3 text-base font-medium text-dark dark:text-light/70">
+                            Graphic Design
+                        </p>
+                    </div>
+                    <div class="rounded-2xl bg-light p-2 text-center dark:bg-dark-2 md:p-4">
+                        <div class="grid place-content-center rounded-lg bg-white p-6 dark:bg-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="h-12 w-12 text-primary lg:h-16 lg:w-16">
+                                <path
+                                    d="M36.214 36.773a15.982 15.982 0 0 1 1.12 5.894A15.86 15.86 0 0 1 32 54.56a15.814 15.814 0 0 1-10.666 4.107c-8.827 0-16-7.174-16-16 0-7.36 5.013-13.6 11.786-15.44" />
+                                <path
+                                    d="M46.88 27.227c6.773 1.84 11.787 8.08 11.787 15.44 0 8.826-7.174 16-16 16A15.814 15.814 0 0 1 32 54.56" />
+                                <path d="M16 21.333a16 16 0 1 0 32 0 16 16 0 0 0-32 0Z" />
+                            </svg>
+                        </div>
+                        <p class="mt-3 text-base font-medium text-dark dark:text-light/70">
+                            Branding
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark">
+                <marquee behavior="scroll" direction="left"
+                    class="overflow-hidden text-nowrap rounded-lg bg-light p-3 text-lg font-medium text-muted dark:bg-dark-2">
+                    Available For Hire 🚀 Crafting Digital Experiences 🎨 Available For Hire 🚀
+                    Crafting Digital Experiences 🎨
+                </marquee>
+
+                <h2 class="mt-4 text-[40px] font-semibold leading-snug text-dark dark:text-light">
+                    Let's👋 <br />
+                    Work Together
+                </h2>
+
+                <a href="contact.html"
+                    class="mt-6 inline-flex items-center justify-center gap-2 border-b text-center text-base text-primary transition hover:border-b-primary dark:border-b-muted dark:hover:border-b-primary">
+                    <span>Let's Talk</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="h-5 w-5">
+                        <path d="M17.5 11.667v-5h-5" />
+                        <path d="m17.5 6.667-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </a>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center">
+            <p class="text-sm dark:text-light/70">
+                @ Eterniventures 2024, Design By
+                <a href="#"
+                    class="inline-block border-b border-b-transparent text-primary transition hover:border-b-primary hover:text-blue-600">
+                    Silila
+                </a>
+            </p>
+        </footer>
+    </div>
+
+    <div class="shapes">
+        <div class="fixed -left-1/2 -top-1/2 -z-10 animate-spin-very-slow xl:-left-[20%] xl:-top-1/3">
+            <img src="assets/img/gradient-1.png" alt="" class="" />
+        </div>
+
+        <div class="fixed -right-[50%] top-[10%] -z-10 animate-spin-very-slow xl:-right-[15%] xl:top-[10%]">
+            <img src="assets/img/gradient-2.png" alt="" class="" />
+        </div>
+
+        <div class="move-with-cursor fixed left-[10%] top-[20%] -z-10">
+            <img src="assets/img/object-3d-1.png" alt="" class="" />
+        </div>
+
+        <div class="move-with-cursor fixed bottom-[20%] right-[10%] -z-10">
+            <img src="assets/img/object-3d-2.png" alt="" class="" />
+        </div>
+    </div>
+
+    <script src="./assets/js/preline.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/venobox.min.js"></script>
+    <script src="./assets/js/clipboard.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>
